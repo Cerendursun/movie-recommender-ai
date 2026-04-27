@@ -1,24 +1,44 @@
-https://movie-recommender-ai-6ussysbbczltc7rkzpcnpm.streamlit.app/
-<img width="1919" height="908" alt="Ekran görüntüsü 2026-04-27 194121" src="https://github.com/user-attachments/assets/114b0805-4e06-478f-91b4-c9f461edfcb3" />
 # 🎬 AI Film Öneri Sistemi
 
-Bu proje, makine öğrenmesi kullanarak film önerileri yapan web tabanlı bir uygulamadır. Streamlit ile geliştirilmiştir ve modern, Netflix tarzı bir kullanıcı arayüzüne sahiptir.
+## 🚀 Canlı Demo
+👉 https://movie-recommender-ai-6ussysbbczltc7rkzpcnpm.streamlit.app/
 
-## 🚀 Özellikler
+---
 
-- 🎯 TF-IDF ve Cosine Similarity ile film önerisi
-- 🎬 OMDb API ile gerçek film posterleri
-- 🎨 Modern ve responsive (mobil + masaüstü uyumlu) arayüz
-- ⚡ Hızlı ve optimize edilmiş (RAM dostu)
-- 🔍 Film seçimi için akıllı arama (autocomplete)
+## 📸 Preview
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/114b0805-4e06-478f-91b4-c9f461edfcb3" width="80%" />
+</p>
+
+---
+
+## 🎯 Proje Amacı
+
+Bu proje, kullanıcıların beğendiği filmlere benzer filmleri öneren bir AI tabanlı öneri sistemidir.
+
+---
 
 ## 🧠 Nasıl Çalışır?
 
-Bu sistem, doğal dil işleme (NLP) teknikleri kullanır:
+Sistem doğal dil işleme teknikleri kullanır:
 
-- Film açıklamaları (overview) **TF-IDF** ile sayısal vektörlere dönüştürülür
+- Film açıklamaları **TF-IDF** ile vektörleştirilir
 - Filmler arası benzerlik **Cosine Similarity** ile hesaplanır
-- Seçilen filme en benzer filmler kullanıcıya önerilir
+- En benzer filmler kullanıcıya önerilir
+
+---
+
+## 🚀 Özellikler
+
+- 🎯 TF-IDF + Cosine Similarity tabanlı öneri sistemi
+- 🎬 OMDb API ile gerçek film posterleri
+- 🔍 Akıllı film arama (autocomplete)
+- ⚡ Hızlı ve optimize performans
+- 📱 Responsive (mobil + desktop uyumlu)
+- 🎨 Modern Streamlit arayüzü
+
+---
 
 ## 🛠️ Kullanılan Teknolojiler
 
@@ -27,6 +47,8 @@ Bu sistem, doğal dil işleme (NLP) teknikleri kullanır:
 - Pandas
 - Scikit-learn
 - OMDb API
+
+---
 
 ## 📊 Veri Seti
 
