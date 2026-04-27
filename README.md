@@ -1,4 +1,4 @@
-
+https://movie-recommender-ai-6ussysbbczltc7rkzpcnpm.streamlit.app/
 <img width="1919" height="908" alt="Ekran görüntüsü 2026-04-27 194121" src="https://github.com/user-attachments/assets/114b0805-4e06-478f-91b4-c9f461edfcb3" />
 # 🎬 AI Film Öneri Sistemi
 
