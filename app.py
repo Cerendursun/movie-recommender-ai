@@ -4,31 +4,24 @@ import requests
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
-# -----------------------
-# CONFIG
-# -----------------------
+
 st.set_page_config(page_title="AI Movie Recommender", layout="wide")
 
 OMDB_API_KEY = "30abedce"
 
-# -----------------------
+
 # DATA
-# -----------------------
+
 df = pd.read_csv("tmdb_5000_movies.csv")
 df["overview"] = df["overview"].fillna("")
 
-# -----------------------
-# MODEL (RAM SAFE)
-# -----------------------
+
 tfidf = TfidfVectorizer(stop_words="english", max_features=5000)
 matrix = tfidf.fit_transform(df["overview"])
 
 # RAM patlamaz
 cosine_sim = linear_kernel(matrix, matrix)
 
-# -----------------------
-# POSTER (OMDb)
-# -----------------------
 def get_poster(title):
     try:
         url = f"http://www.omdbapi.com/?t={title}&apikey={OMDB_API_KEY}"
@@ -41,9 +34,7 @@ def get_poster(title):
     except:
         return None
 
-# -----------------------
-# UI STYLE (RESPONSIVE FIX)
-# -----------------------
+
 st.markdown("""
 <style>
 
@@ -94,21 +85,14 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# -----------------------
-# HEADER
-# -----------------------
 st.markdown('<div class="title">🎬 AI Movie Recommender</div>', unsafe_allow_html=True)
 st.write("Film seç → sana benzerlerini bulayım")
 
-# -----------------------
-# SEARCH
-# -----------------------
+
 movie_list = sorted(df["title"].dropna().unique())
 selected_movie = st.selectbox("🔍 Film seç", movie_list)
 
-# -----------------------
-# RECOMMENDATION
-# -----------------------
+
 if st.button("🚀 Önerileri Göster"):
 
     idx = df[df["title"] == selected_movie].index[0]
